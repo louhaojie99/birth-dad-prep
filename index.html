@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243f36">
+  <meta name="description" content="孕晚期准备、住院陪护、产后照护与出院清单，支持演示和滚动阅读。">
+  <title>准爸爸待产准备指南</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+</head>
+<body data-mode="ppt">
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" class="svg-sprite">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+      <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v15c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></symbol>
+      <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="3"/><path d="M9 7V5a3 3 0 0 1 6 0v2M4 12h16m-8-2v4"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1ZM9 21v-8h6v8"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <aside class="sidebar" id="sidebar" aria-label="章节目录">
+    <a class="brand" href="#welcome" data-chapter>
+      <span><strong>准爸爸手册</strong></span>
+    </a>
+    <p class="nav-caption">章节目录</p>
+    <nav class="chapter-nav" aria-label="指南章节">
+      <a href="#welcome" data-chapter aria-current="step"><span class="nav-number">01</span>指南首页</a>
+      <a href="#preparation" data-chapter><span class="nav-number">02</span>孕晚期准备</a>
+      <a href="#hospital-bag" data-chapter><span class="nav-number">03</span>待产包清单</a>
+      <a href="#birth" data-chapter><span class="nav-number">04</span>分娩陪伴</a>
+      <a href="#day-one" data-chapter><span class="nav-number">05</span>产后第一天</a>
+      <a href="#day-two" data-chapter><span class="nav-number">06</span>产后第二天</a>
+      <a href="#day-three" data-chapter><span class="nav-number">07</span>产后第三天</a>
+      <a href="#skills" data-chapter><span class="nav-number">08</span>照护技能</a>
+      <a href="#going-home" data-chapter><span class="nav-number">09</span>出院准备</a>
+      <a href="#checklist" data-chapter><span class="nav-number">10</span>准备清单</a>
+    </nav>
+  </aside>
+  <button class="menu-backdrop" id="menu-backdrop" aria-label="关闭目录" tabindex="-1"></button>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menu-toggle" aria-label="打开章节目录" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <div class="breadcrumb"><span>准爸爸待产准备指南</span><i>/</i><strong id="current-title">指南首页</strong></div>
+      <div class="toolbar">
+        <div class="mode-switch" role="group" aria-label="预览模式">
+          <button type="button" data-set-mode="ppt" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-screen"/></svg>PPT 模式</button>
+          <button type="button" data-set-mode="normal" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>正常模式</button>
+        </div>
+        <button class="icon-button" id="fullscreen" aria-label="进入全屏" aria-pressed="false" title="进入全屏"><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="chapter is-active" id="welcome" data-short-title="指南首页" aria-labelledby="title-welcome">
+        <div class="chapter-inner">
+
+          <div class="cover-layout">
+            <div class="cover-copy">
+
+              <h1 id="title-welcome" tabindex="-1">准爸爸<br>待产<span>准备指南</span></h1>
+              <p class="lede">孕晚期准备、住院陪护、<br>产后照护与出院清单。</p>
+              <a class="cover-cta" href="#preparation" data-chapter>开始准备<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+
+            </div>
+            <div class="cover-art">
+
+              <img src="./assets/dad-and-baby.png" width="1536" height="1536" alt="留蓬松纹理短发、穿深色外套的爸爸，温柔地抱着戴橘色小帽、裹着米白色包被的宝宝。">
+
+            </div>
+          </div>
+          <div class="route-label">准备流程</div>
+          <div class="route-grid">
+            <a class="route-card" href="#preparation" data-chapter><span class="route-icon"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg></span><span><strong>出发前</strong><small>物品 · 路线 · 家庭分工</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="route-card" href="#birth" data-chapter><span class="route-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><span><strong>住院期间</strong><small>分娩 · 恢复 · 宝宝照护</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="route-card" href="#going-home" data-chapter><span class="route-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span><span><strong>出院回家</strong><small>出院 · 技能 · 行动清单</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <button class="chapter-link prev" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>已是第一篇</strong></span></button>
+            <a class="chapter-link next" href="#preparation" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>孕晚期准备</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="preparation" data-short-title="孕晚期准备" aria-labelledby="title-preparation" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-preparation" tabindex="-1">孕晚期准备</h2><p class="lede">确认联系方式、医院路线和家庭分工。</p></header>
+          <div class="content-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>保持联系畅通</h3><p>保持电话畅通，确认来电能及时听见，提前了解医院急诊、住院部路线和办理流程。</p><ul><li>常用联系人置顶</li><li>手机、充电宝保持有电</li></ul></article>
+            <article class="info-card sage"><span class="card-number">02</span><h3>明确家庭分工</h3><p>提前商量陪产、接送、送饭和家务分工，并安排一位替补联系人。</p><ul><li>按医院要求安排陪护</li><li>问清她对探视与拍照的意愿</li></ul></article>
+            <article class="info-card"><span class="card-number">03</span><h3>识别就医信号</h3><p>怀疑破水、阴道出血、胎动明显减少，或未足月出现临产迹象，应及时联系产科。</p><ul><li>记录出现时间与变化</li><li>情况严重时拨打 120</li></ul></article>
+          </div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><strong>本章行动</strong><p>把医院电话、路线、陪护人和替补接送人整理在同一条备忘录里，与她一起确认。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#welcome" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>指南首页</strong></span></a>
+            <a class="chapter-link next" href="#hospital-bag" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>待产包清单</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="hospital-bag" data-short-title="待产包清单" aria-labelledby="title-bag" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-bag" tabindex="-1">待产包清单</h2><p class="lede">按用途分袋，数量以医院要求为准。</p></header>
+          <div class="content-grid">
+            <article class="info-card sage"><span class="card-number">01</span><h3>证件与就诊资料</h3><p>放在最容易取出的独立文件袋。</p><ul><li>身份证、医保凭证</li><li>产检资料、医院要求的入院材料</li><li>常用药及过敏信息记录</li><li>支付方式、医院联系电话</li></ul></article>
+            <article class="info-card"><span class="card-number">02</span><h3>妈妈与陪护用品</h3><p>选择舒适、方便更换的用品。</p><ul><li>宽松衣物、内衣、防滑拖鞋</li><li>产妇卫生巾、护理垫、洗漱用品</li><li>饮水杯、纸巾、充电器</li><li>爸爸的换洗衣物与日用品</li></ul></article>
+            <article class="info-card peach"><span class="card-number">03</span><h3>宝宝与回家用品</h3><p>先确认医院提供的物品，再补齐。</p><ul><li>纸尿裤、棉柔巾、换洗衣物</li><li>适合天气的出院衣物</li><li>喂养用品按计划与医院要求备齐</li><li>乘车回家：适配的婴儿安全座椅</li></ul></article>
+          </div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg><div><strong>本章行动</strong><p>给物品分袋贴标签，亲手试找一次证件、护理垫和宝宝衣物，再把包放到随时能带走的位置。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#preparation" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>孕晚期准备</strong></span></a>
+            <a class="chapter-link next" href="#birth" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>分娩陪伴</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="birth" data-short-title="分娩陪伴" aria-labelledby="title-birth" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-birth" tabindex="-1">分娩陪伴</h2><p class="lede">及时回应需求，配合医护安排。</p></header>
+          <div class="content-grid two">
+            <article class="info-card sage"><h3>先询问，再行动</h3><p>按她的意愿提供陪伴或代为沟通。</p><ul><li>尊重休息、探视与拍摄意愿</li><li>需要时帮忙联系医护</li><li>记录交代事项，减少反复询问</li></ul></article>
+            <article class="info-card"><div class="step-list">
+              <div class="step"><span>01</span><div><h3>保持在场，遵守陪产安排</h3><p>提前安排好事务，按医院规则陪伴或等候。</p></div></div>
+              <div class="step"><span>02</span><div><h3>帮她表达，记录医护交代</h3><p>确认她的需求，记录检查、用品和下一步安排，不擅自替她决定。</p></div></div>
+              <div class="step"><span>03</span><div><h3>迎接宝宝，也先关心她</h3><p>配合医护核对宝宝手环，及时关心妈妈的状态；抱宝宝、拍照均先确认允许。</p></div></div>
+            </div></article>
+          </div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><div><strong>本章行动</strong><p>确认她当前的需求，及时提供帮助。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#hospital-bag" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>待产包清单</strong></span></a>
+            <a class="chapter-link next" href="#day-one" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>产后第一天</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="day-one" data-short-title="产后第一天" aria-labelledby="title-day-one" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-day-one" tabindex="-1">产后第一天</h2><p class="lede">保护隐私，协助生活护理，留意身体异常。</p></header>
+          <div class="content-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>保护隐私与休息</h3><p>护理、擦洗和哺乳时做好遮挡，减少不必要的探视。</p><ul><li>先征求她的同意</li><li>物品放到伸手可及的位置</li><li>配合医护，不妨碍必要护理</li></ul></article>
+            <article class="info-card sage"><span class="card-number">02</span><h3>吃喝与起身，按指导来</h3><p>按医嘱与耐受情况安排饮食。第一次下床先询问护士，协助缓慢起身。</p><ul><li>下床时间先由医护评估</li><li>头晕、疼痛及时停下求助</li><li>饮食兼顾营养与个人耐受</li></ul></article>
+            <article class="info-card"><span class="card-number">03</span><h3>及时反馈，主动求助</h3><p>排尿困难、疼痛或哺乳不适及时找医护；不要自行安排通便药或催乳处理。</p><ul><li>协助清洁、更换卫生用品</li><li>支持在指导下开始喂养</li><li>记录医嘱，按时提醒</li></ul></article>
+          </div>
+          <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>出现异常，及时求助：</strong>突然大量出血、胸痛或呼吸困难立即呼叫医护／120；发热、严重头痛或视力变化也要及时就医。</p></div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><strong>本章行动</strong><p>问清今天的饮食、下床、排尿观察和用药安排，再把水杯、呼叫铃和日用品放好。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#birth" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>分娩陪伴</strong></span></a>
+            <a class="chapter-link next" href="#day-two" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>产后第二天</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="day-two" data-short-title="产后第二天" aria-labelledby="title-day-two" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-day-two" tabindex="-1">产后第二天</h2><p class="lede">做好照护交接、喂养支持和伤口护理。</p></header>
+          <div class="content-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>陪同与交接</h3><p>宝宝检查、接种或护理时，按医院规则陪同，确认去向、身份与交接人员。</p><ul><li>记录医护安排和检查结果</li><li>照护交接说清喂养与换尿布情况</li></ul></article>
+            <article class="info-card sage"><span class="card-number">02</span><h3>支持喂养，缓解不适</h3><p>涨奶、含接疼痛时请医护或哺乳专业人员评估。可在指导下短时冷敷；表达乳汁以缓解不适为度。</p><ul><li>不强行揉按，不追求排空</li><li>不自行采用偏方处理涨奶</li></ul></article>
+            <article class="info-card"><span class="card-number">03</span><h3>冲奶与伤口护理</h3><p>配方奶粉并非无菌。洗手、清洁消毒用具，先量水后加粉，比例按包装；现配现喂。</p><ul><li>按规范用安全水温冲调，再冷却喂食</li><li>伤口护理按医嘱，不自行处理</li></ul></article>
+          </div>
+          <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>冲调温度 ≠ 喂入口的温度。</strong>NHS 建议普通粉状婴儿配方奶用不低于 70°C 的水冲调，随后冷却并试温。特殊配方或说明冲突时先咨询医护。</p></div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><strong>本章行动</strong><p>请护士示范一次需要你负责的照护，再由你操作、请对方确认。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#day-one" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>产后第一天</strong></span></a>
+            <a class="chapter-link next" href="#day-three" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>产后第三天</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="day-three" data-short-title="产后第三天" aria-labelledby="title-day-three" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-day-three" tabindex="-1">产后第三天</h2><p class="lede">确认检查安排，记录结果与复查时间。</p></header>
+          <div class="content-grid two">
+            <article class="info-card sage"><h3>妈妈的恢复与检查</h3><p>向医护确认是否需要 B 超、血常规等检查，了解恢复情况。</p><ul><li>检查项目与时间以本人的医嘱为准。</li><li>记下结果、用药、伤口护理与复诊安排。</li><li>问问她睡得怎样、哪里不舒服，也照顾她的情绪。</li></ul></article>
+            <article class="info-card"><h3>宝宝的检查与喂养</h3><p>关注听力筛查、黄疸复查，记录体重与黄疸数值。</p><ul><li>写下检查日期、结果与复查时间。</li><li>记录喂养、湿尿布与便便变化，异常及时询问医护。</li><li>湿尿布数量结合日龄判断，减少或出现异常时及时咨询医护。</li></ul></article>
+          </div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><strong>本章行动</strong><p>建一份「妈妈 / 宝宝」双栏记录，记录时间、观察、医护交代和下一次检查。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#day-two" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>产后第二天</strong></span></a>
+            <a class="chapter-link next" href="#skills" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>照护技能</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="skills" data-short-title="照护技能" aria-labelledby="title-skills" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-skills" tabindex="-1">照护技能</h2><p class="lede">请医护示范，再在指导下完整练习。</p></header>
+          <div class="content-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>照顾妈妈</h3><p>协助起身，更换护理垫，照顾吃饭喝水，按医嘱提醒用药。</p><ul><li>先询问她需要怎样的帮助</li><li>清洁前后洗手，尊重隐私</li><li>不会的步骤先请护士示范</li></ul></article>
+            <article class="info-card"><span class="card-number">02</span><h3>照顾宝宝</h3><p>学习抱娃、拍嗝、换尿布、穿衣和喂养；遇到吐奶先判断状态并求助。</p><ul><li>抱起时托稳头颈与身体</li><li>换尿布时不把宝宝独留高处</li><li>不摇晃宝宝，不强行喂食</li></ul></article>
+            <article class="info-card sage"><span class="card-number">03</span><h3>建立安全睡眠环境</h3><p>每次睡眠都让宝宝仰卧，使用平坦、坚实的独立睡眠面，与照护者同房。</p><ul><li>床内不放枕头、玩偶和松软物品</li><li>不要抱着宝宝在沙发上睡着</li><li>不要用裹被覆盖宝宝口鼻</li></ul></article>
+          </div>
+          <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p>宝宝出现呼吸困难、发青、无法唤醒等情况，立即呼叫医护或 120。急救技能应通过正规的婴儿急救培训学习。</p></div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><div><strong>本章行动</strong><p>在专业人员指导下练习抱娃、换尿布和喂养。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#day-three" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>产后第三天</strong></span></a>
+            <a class="chapter-link next" href="#going-home" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>出院准备</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="going-home" data-short-title="出院准备" aria-labelledby="title-home" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-home" tabindex="-1">出院准备</h2><p class="lede">核对材料、医嘱、复查和接送安排。</p></header>
+          <div class="content-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>材料归档</h3><p>领取病历与相关材料，咨询费用报销，核对出生证明信息。</p><ul><li>逐字核对姓名、日期等信息</li><li>证件按医院与当地政策准备</li><li>病历、票据、结果单分类留存</li></ul></article>
+            <article class="info-card sage"><span class="card-number">02</span><h3>问清后续安排</h3><p>问清返院检查时间。</p><ul><li>妈妈与宝宝分别记录</li><li>确认用药、伤口护理与喂养安排</li><li>记下黄疸、听力等后续复查要求</li><li>保存出现异常时的联系电话</li></ul></article>
+            <article class="info-card peach"><span class="card-number">03</span><h3>安排回家第一晚</h3><p>安排接送、餐食、家务和轮班，优先保证妈妈恢复与宝宝安全。</p><ul><li>乘车使用合适的婴儿安全座椅</li><li>提前准备宝宝独立睡眠空间</li><li>爸爸接手换尿布、取物与整理</li></ul></article>
+          </div>
+          <div class="action-strip"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><div><strong>本章行动</strong><p>逐项确认材料、医嘱、复查、联系人和接送安排。</p></div></div>
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#skills" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>照护技能</strong></span></a>
+            <a class="chapter-link next" href="#checklist" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>准备清单</strong></span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter" id="checklist" data-short-title="准备清单" aria-labelledby="title-checklist" hidden>
+        <div class="chapter-inner">
+
+          <header class="chapter-heading"><h2 id="title-checklist" tabindex="-1">准备清单</h2><p class="lede">按实际准备情况逐项确认。</p></header>
+          <div class="check-summary"><p id="check-message" aria-live="polite">勾选已完成事项。</p><span class="check-count"><span id="check-count">00</span><small> / 08 已完成</small></span></div>
+          <div class="checklist">
+            <label class="check-item"><input type="checkbox" data-check="contacts"><span><strong>医院路线与联系电话已确认</strong><small>急诊、住院部、接送与替补联系人</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="bag"><span><strong>待产包与证件已分袋装好</strong><small>按医院清单补齐，爸爸也能快速找到</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="roles"><span><strong>陪护与家庭分工已商量好</strong><small>接送、餐食、家务、探视与休息</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="care"><span><strong>妈妈的护理安排已问清</strong><small>饮食、下床、伤口、用药均遵医嘱</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="practice"><span><strong>宝宝照护技能已亲手练习</strong><small>抱娃、换尿布、喂养与安全睡眠</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="records"><span><strong>检查与喂养记录已建立</strong><small>妈妈与宝宝分开记，异常及时反馈</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="discharge"><span><strong>出院材料与复查时间已核对</strong><small>证件信息、医嘱、票据与联系方式</small></span></label>
+            <label class="check-item"><input type="checkbox" data-check="home"><span><strong>回家接送与照护已安排</strong><small>婴儿安全座椅、睡眠空间、第一晚分工</small></span></label>
+          </div>
+          <p class="storage-note" id="storage-note">勾选记录仅保存在当前浏览器中。</p>
+
+
+          <nav class="chapter-pagination" aria-label="篇章导航">
+            <a class="chapter-link prev" href="#going-home" data-chapter><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg><span><small>上一篇</small><strong>出院准备</strong></span></a>
+            <button class="chapter-link next" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span><small>下一篇</small><strong>已是最后一篇</strong></span></button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="appendix" id="appendix" aria-labelledby="appendix-title" hidden>
+        <h2 id="appendix-title">延伸资料</h2>
+        <details>
+          <summary>查看原视频文字整理</summary>
+          <p class="transcript-intro">以下保留视频原话与必要的校正说明，按章节整理，省略重复语气词；存在歧义处已标注。护理建议以正文和医护指导为准。</p>
+          <article class="transcript-block"><h3><time>00:00–00:19</time>开场与目录</h3><p>［片头约 1 秒口令未能可靠确认，略。］尊敬的老婆，您已进入了孕晚期。接下来我将对你进行准爸爸的产前汇报。我将从以下 7 点给你进行汇报，分别是分娩前的准备、分娩时以及产后的前三天，包括必备的技能和出院准备。</p></article>
+          <article class="transcript-block"><h3><time>00:19–00:37</time>分娩前的准备</h3><p>第一点，分娩前的准备。我已将待产包收拾完毕，到时候我们就是准备着发动，可以随时出发。然后就是手机音量我已调到最大，保持畅通。我已了解医院的急诊、住院部路线，包括它的办理手续的流程。</p></article>
+          <article class="transcript-block"><h3><time>00:37–00:52</time>分娩时的准备</h3><p>第二，分娩时的准备。我已做好了排空工作，保证生产前一直待在产房外面。［宝宝出生后的衔接短句不清。］我会第一个抱他，对他进行拍照、拍视频，检查全身，包括检查手环。出产房时，我会保证第一个出现在你的面前。</p><p class="transcript-correction">整理说明：「排空工作」为视频用语。正文将其整理为提前安排事务、保持在场；医疗检查交由医护，拍摄、抱宝宝与陪产按医院安排并尊重妈妈意愿。</p></article>
+          <article class="transcript-block"><h3><time>00:52–01:14</time>产后第一天：隐私与饮食</h3><p>第三点，产后的第一天。会保护你的隐私，出产房、伤口护理、擦洗时及时清场，确保你周围没有除我以外的人。接下来是饮食清淡，我会让我妈给你熬小米油、烂面条，确保清淡饮食。接下来，不能吃什么？不能吃鸡蛋、豆浆，这样会引起胀气。</p><p class="transcript-correction">核对说明：保护隐私需配合必要医疗护理；产后饮食应按医嘱、耐受和均衡营养安排，不能把鸡蛋或豆浆统一列为禁食项。</p></article>
+          <article class="transcript-block"><h3><time>01:14–01:38</time>产后第一天：活动、排泄与喂养</h3><p>然后接下来下床走，如果剖腹产 6 小时后就要下床，我会先摇床，再侧身，再让你坐着。接下来是排尿和排便，顺产是 4–6 小时内排尿，剖腹产是 6 小时以后。如果排便困难，我这边已经准备好了蜂蜜露。然后开奶，两小时内让宝宝尝试吸奶。提前烧好水，洗漱时全用热水。</p><p class="transcript-correction">核对说明：活动与排尿安排受手术、麻醉、导尿和恢复情况影响，不统一用 6 小时判断；排尿或排便困难需告知医护，不自行用药。「蜂蜜露」按字幕保留，并非本指南推荐。喂养尽早寻求专业支持，清洁用水以温暖舒适、不烫为准。</p></article>
+          <article class="transcript-block"><h3><time>01:38–02:03</time>产后第二天：照护与活动</h3><p>第四点，产后第二天，宝宝不能离开视线，包括他打疫苗时、洗澡时，全程由家属陪同。饮食清淡，我到时候给你准备青菜，包括富含膳食纤维的素食，预防便秘，不让你喝荤汤。以及下床散步，坚持下床走走。如果你是剖腹产的话，你可能就是不太想下床，到时候会监督你，让你下床走走。为什么要下床？因为这样可以防止你的内脏粘连。</p><p class="transcript-correction">核对说明：检查陪同遵守医院制度；饮食不必统一禁荤汤。活动应由医护评估、循序渐进，不能强迫下床，也不能把「防止内脏粘连」作为保证。</p></article>
+          <article class="transcript-block"><h3><time>02:03–02:34</time>产后第二天：涨奶、冲奶与伤口</h3><p>生理性胀奶问题，会优先选择亲喂，然后吸奶器低档。如果这些都不能处理的话，会用冷敷贴或者土豆片外敷，这样都可以。然后现在是冲泡奶粉的时候，先放水后放奶，水要保证是纯净水，吃完奶后竖抱拍嗝。护理伤口。［画面字幕在此出现追问「水水温多少」，衔接位置可能指向前述冲奶。］水温就是 45 度到 50 度。然后护理伤口，我会谨听医生和护士的方法，及时对你进行伤口处理，勤换［产褥垫：结合画面章节文字校正］。</p><p class="transcript-correction">核对说明：涨奶应评估含接和喂养，不常规采用土豆片或过度泵奶。奶粉非无菌，纯净水也不等于无菌；NHS 建议普通粉状婴儿配方奶以不低于 70°C 的水冲调，再冷却喂食。原话 45–50°C 的问答衔接存在歧义，不作为冲奶或清洗伤口的通用标准。伤口护理遵医嘱。</p></article>
+          <article class="transcript-block"><h3><time>02:34–02:51</time>产后第三天</h3><p>产后第三天，我会带着你做 B 超，查子宫的恢复和血常规。宝宝这边就是做听力筛查、黄疸复查。我会及时记录宝宝的体重以及黄疸的数值。按需喂养，每天保证尿 6 片以上。</p><p class="transcript-correction">核对说明：检查项目和日期以医院安排为准。湿尿布数量与日龄有关；NHS 的「至少 6 片较重湿尿布 / 24 小时」用于第 5 天起的观察，不能直接套用到出生第三天。</p></article>
+          <article class="transcript-block"><h3><time>02:51–03:15</time>必备技能</h3><p>必备技能。对老婆，我会协助你下床，［叠／给刀纸：语音与字幕不完全一致］、更换产褥垫，到时候我会给你演示一下。照顾吃饭和喝水，提醒你及时用药。对宝宝这边，掌握了那么多方法，包括手托法抱娃、腕托法抱娃、冲泡奶粉、拍嗝、吐奶处理、换纸尿裤和穿衣服，以及襁褓包法。</p><p class="transcript-correction">补充说明：护理操作须在专业人员指导下练习，吐奶与紧急呼吸问题要区分；视频未展开安全睡眠，正文另行补充了仰卧、同房独立睡眠面等原则。</p></article>
+          <article class="transcript-block"><h3><time>03:15–03:38</time>出院准备与结语</h3><p>最后就是出院前的准备。我会拿好证件，包括双方的身份证、户口本、结婚证、医保卡和生育服务单，以及办理出院的手续，包括病历单的领取、报销费用的咨询，以及问清楚返回的检查时间，包括小孩的出生证明，注意他的名字千万不能写错。好，以上就是我的汇报，恳请老婆批评指正。</p><p class="transcript-correction">补充说明：以上为视频列举，实际证件与办理要求以所在地区和医院为准。</p></article>
+        </details>
+        <details>
+          <summary>查看护理参考资料</summary>
+        <p>护理内容参考英国国民保健署公开资料。具体安排以医护指导为准，中国大陆急救电话为 120。</p>
+        <ul class="reference-list">
+          <li><a href="https://www.nhs.uk/pregnancy/labour-and-birth/preparing-for-the-birth/pack-your-bag-for-labour/" target="_blank" rel="noopener noreferrer">01 · 待产包准备清单 ↗</a></li>
+          <li><a href="https://www.nhs.uk/pregnancy/labour-and-birth/signs-that-labour-has-begun/" target="_blank" rel="noopener noreferrer">02 · 临产迹象与联系医院的时机 ↗</a></li>
+          <li><a href="https://www.nhs.uk/pregnancy/labour-and-birth/your-body/" target="_blank" rel="noopener noreferrer">03 · 产后身体恢复与异常信号 ↗</a></li>
+          <li><a href="https://www.nhs.uk/tests-and-treatments/caesarean-section/recovery/" target="_blank" rel="noopener noreferrer">04 · 剖宫产恢复 ↗</a></li>
+          <li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/breast-pain/" target="_blank" rel="noopener noreferrer">05 · 涨奶与哺乳期乳房疼痛 ↗</a></li>
+          <li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/bottle-feeding/making-up-baby-formula/" target="_blank" rel="noopener noreferrer">06 · 配方奶粉的安全冲调 ↗</a></li>
+          <li><a href="https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding-problems/enough-milk/" target="_blank" rel="noopener noreferrer">07 · 判断宝宝是否摄入足够乳汁 ↗</a></li>
+          <li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/" target="_blank" rel="noopener noreferrer">08 · 婴儿安全睡眠与紧急信号 ↗</a></li>
+          <li><a href="https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/" target="_blank" rel="noopener noreferrer">09 · 新生儿睡眠与家庭支持 ↗</a></li>
+        </ul>
+        </details>
+      </section>
+    </main>
+    <footer class="deck-footer" aria-label="演示控制">
+      <div class="progress-track" id="deck-progress" role="progressbar" aria-label="章节进度" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><div class="progress-fill"></div></div>
+      <span class="footer-hint"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span class="keyboard-hint">使用 <kbd>←</kbd> <kbd>→</kbd> 翻页</span><span class="touch-hint">章节导航</span></span>
+      <div class="slide-navigation"><span class="slide-counter"><strong id="page-number">01</strong> / 10</span><button class="nav-arrow" id="previous" aria-label="上一页" disabled><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button><button class="nav-arrow next" id="next" aria-label="下一页"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    </footer>
+  </div>
+  <p class="sr-only" id="slide-status" role="status" aria-live="polite" aria-atomic="true">第 1 页，共 10 页：指南首页</p>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p>此页面需要启用 JavaScript 才能切换模式和使用清单。</p></noscript>
+</body>
+</html>
